@@ -1,0 +1,6 @@
+merrInfo = input("Vendos emrin tuaj: ")
+print(f"Pershendetje {merrInfo}.")
+merrinfo = input("Vendos mbiemrin tuaj: ")
+print(f"Pershendetje {merrinfo}.")
+merrInfo = input("Vendos emrin dhe mbiemrin tuaj   : ")
+print(f"Pershendetje {merrInfo}.")
