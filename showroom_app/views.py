@@ -1,8 +1,12 @@
 from django.shortcuts import render
-
+from .models import*
 
 def home(request):
-    return render(request, "showroom_app/home.html")
+    allcars = cars.objects.all()
+    context = {"allcars":allcars}
+    return render(request, "showroom_app/home.html" , context)
+    
+
 
 
 def about(request):

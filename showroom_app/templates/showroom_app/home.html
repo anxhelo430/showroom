@@ -189,10 +189,11 @@
 
     <div class="row g-4">
       <!-- Car 1 -->
+       {% for car in allcars %}
       <div class="col-md-6 col-lg-4">
         <article class="car-card">
          <img
-  src="{% static 'images/sports-car.jpg' %}"
+  src="{{car.cars_image.url}}"
   class="img-fluid"
   alt="Aurelia GT sports car"
 >
@@ -200,17 +201,19 @@
           <div class="car-card-body">
             <div class="d-flex justify-content-between align-items-start">
               <div>
-                <h3>Aurelia GT</h3>
+                <h3>{{car.cars_name}}</h3>
                 <p>2025 · Automatic · 620 HP</p>
               </div>
 
-              <span class="car-price">€145,000</span>
+              <span class="car-price">€{{car.cars_price}}</span>
             </div>
 
             <a href="{% url 'models' %}" class="car-link">View details →</a>
           </div>
         </article>
       </div>
+      {% endfor %}
+      {% comment %}
 
       <!-- Car 2 -->
       <div class="col-md-6 col-lg-4">
@@ -332,6 +335,7 @@
           </div>
         </article>
       </div>
+      {% endcomment %}
     </div>
   </div>
 </section>
