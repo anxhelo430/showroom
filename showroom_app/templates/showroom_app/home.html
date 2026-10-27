@@ -30,7 +30,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">VELOCITÀ<span>MOTORS</span></a>
+      <a class="navbar-brand" href="{% url 'home' %}">VELOCITÀ<span>MOTORS</span></a>
 
       <button
         class="navbar-toggler "
@@ -47,23 +47,23 @@
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link active" href="{% url 'home' %}">Home</a>
           </li>
 
 
           <li class="nav-item">
-            <a class="nav-link" href="models.html">Models</a>
+            <a class="nav-link" href="{% url 'models' %}">Models</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
+            <a class="nav-link" href="{% url 'about' %}">About Us</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
+            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
           </li>
           <li class="nav-item ms-lg-3">
-            <a class="btn btn-test-drive" href="contact.html">Test Drive</a>
+            <a class="btn btn-test-drive" href="{% url 'contact' %}">Test Drive</a>
           </li>
           <li class="nav-item ms-md-3">
   <button
@@ -116,11 +116,11 @@
             vehicles designed to move you.
           </p>
 
-          <a class="btn btn-main me-2" href="models.html">
+          <a class="btn btn-main me-2" href="{% url 'models' %}">
             Explore Models
           </a>
 
-          <a class="btn btn-outline-light" href="about.html">
+          <a class="btn btn-outline-light" href="{% url 'about' %}">
             Our Story
           </a>
         </div>
@@ -139,7 +139,7 @@
     <div class="row g-4">
       <!-- Sports Cars -->
       <div class="col-md-4">
-        <a href="models.html" class="category-card sports-card">
+        <a href="{% url 'models' %}" class="category-card sports-card">
           <div class="category-overlay">
             <h3>Sports Cars</h3>
             <p>Performance without compromise</p>
@@ -150,7 +150,7 @@
 
       <!-- Luxury SUVs -->
       <div class="col-md-4">
-        <a href="models.html" class="category-card suv-card">
+        <a href="{% url 'models' %}" class="category-card suv-card">
           <div class="category-overlay">
             <h3>Luxury SUVs</h3>
             <p>Comfort meets capability</p>
@@ -161,7 +161,7 @@
 
       <!-- Electric Cars -->
       <div class="col-md-4">
-        <a href="models.html" class="category-card electric-card">
+        <a href="{% url 'models' %}" class="category-card electric-card">
           <div class="category-overlay">
             <h3>Electric</h3>
             <p>The future of driving</p>
@@ -182,7 +182,7 @@
         <h2 class="section-title text-white">Choose your next drive</h2>
       </div>
 
-      <a href="models.html" class="view-all-link mt-3 mt-md-0">
+      <a href="{% url 'models' %}" class="view-all-link mt-3 mt-md-0">
         View all models →
       </a>
     </div>
@@ -192,7 +192,7 @@
       <div class="col-md-6 col-lg-4">
         <article class="car-card">
          <img
-  src="{% static "images/sports-car.jpg" %}"
+  src="{% static 'images/sports-car.jpg' %}"
   class="img-fluid"
   alt="Aurelia GT sports car"
 >
@@ -207,7 +207,7 @@
               <span class="car-price">€145,000</span>
             </div>
 
-            <a href="models.html" class="car-link">View details →</a>
+            <a href="{% url 'models' %}" class="car-link">View details →</a>
           </div>
         </article>
       </div>
@@ -231,7 +231,7 @@
               <span class="car-price">€118,000</span>
             </div>
 
-            <a href="models.html" class="car-link">View details →</a>
+            <a href="{% url 'models' %}" class="car-link">View details →</a>
           </div>
         </article>
       </div>
@@ -254,6 +254,8 @@
 
               <span class="car-price">€99,000</span>
             </div>
+
+            <a href="{% url 'models' %}" class="car-link">View details →</a>
             </div>
             </article>
             </div>
@@ -277,7 +279,7 @@
         <span class="car-price">€105,000</span>
       </div>
 
-      <a href="models.html" class="car-link">View details →</a>
+      <a href="{% url 'models' %}" class="car-link">View details →</a>
     </div>
   </article>
 </div>
@@ -301,7 +303,7 @@
         <span class="car-price">€92,000</span>
       </div>
 
-      <a href="models.html" class="car-link">View details →</a>
+      <a href="{% url 'models' %}" class="car-link">View details →</a>
     </div>
   </article>
 </div>
@@ -326,7 +328,7 @@
       </div>
 
 
-            <a href="models.html" class="car-link">View details →</a>
+            <a href="{% url 'models' %}" class="car-link">View details →</a>
           </div>
         </article>
       </div>
@@ -408,7 +410,7 @@
         <h2>Ready to get behind the wheel?</h2>
       </div>
 
-      <a href="contact.html" class="btn btn-test-drive">
+      <a href="{% url 'contact' %}" class="btn btn-test-drive">
         Book a Test Drive
       </a>
     </div>
@@ -443,10 +445,10 @@ class ="subscribe-button"
         <h4>Navigate</h4>
 
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="models.html">Models</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'models' %}">Models</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
         </ul>
       </div>
 
